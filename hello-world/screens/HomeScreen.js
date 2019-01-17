@@ -7,6 +7,8 @@ import {
   Text,
   TouchableOpacity,
   View,
+  AppRegistry,
+  TextInput
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -39,6 +41,13 @@ export default class HomeScreen extends React.Component {
 
             <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
+            </View>
+
+            {/*Testing Adding Colored boxes*/}
+            <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'stretch'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+              <View style={{height: 50, backgroundColor: 'skyblue'}} />
+              <View style={{height: 150, backgroundColor: 'steelblue'}} />
             </View>
 
             <Text style={styles.getStartedText}>
@@ -77,6 +86,7 @@ export default class HomeScreen extends React.Component {
           Development mode is enabled, your app will be slower but you can use useful development
           tools. {learnMoreButton}
         </Text>
+        
       );
     } else {
       return (
